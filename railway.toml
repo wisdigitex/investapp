@@ -1,4 +1,5 @@
 [build]
-builder = "heroku/buildpacks:20"
+nixPkgs = ["php82", "php82Extensions.curl", "php82Extensions.mbstring", "php82Extensions.pdo_mysql"]
+
 [deploy]
-startCommand = "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=8080"
+start = "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT"
