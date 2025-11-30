@@ -14,7 +14,7 @@ class ProfileLevelResource extends Resource
 {
     protected static ?string $model = ProfileLevel::class;
     protected static ?string $navigationGroup = 'Settings';
-    protected static ?string $navigationIcon = 'heroicon-o-star';
+    protected static ?string $navigationIcon = 'heroicon-o-user';
 
     public static function form(Form $form): Form
     {
