@@ -1,25 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\UserInvestment;
-
 
 use Illuminate\Http\Request;
+use App\Models\UserInvestment;   // <-- ADD THIS
 
 class InvestmentController extends Controller
 {
     public function myInvestments()
-{
-    $user = auth()->user();
+    {
+        $user = auth()->user();
 
-    $investments = UserInvestment::with('package')
-        ->where('user_id', $user->id)
-        ->orderBy('id', 'desc')
-        ->get();
+        $investments = UserInvestment::with('package')
+            ->where('user_id', $user->id)
+            ->orderBy('id', 'desc')
+            ->get();
 
-    return response()->json($investments);
-}
-
-
-
+        return response()->json($investments);
+    }
 }
