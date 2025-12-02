@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\UserInvestment;
+
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class InvestmentController extends Controller
 {
     public function myInvestments()
 {
