@@ -7,7 +7,7 @@ use App\Models\UserInvestment;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
-class InvestmentController extends Controller
+class UserController extends Controller
 {
     public function invest(Request $request)
     {
